@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/camilosami/keycloak-sami/issues"
   },
-  "homepage": "https://github.com/camilosami/keycloak-sami#readme"
+  "homepage": "https://github.com/camilosami/keycloak-sami#readme",
+  "dependencies": {
+    "jsonwebtoken": "^8.5.1"
+  }
 }
