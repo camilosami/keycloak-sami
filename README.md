@@ -1,4 +1,4 @@
-# keycloak-sami
+# Keycloak-Sami
 
 ### 1. Description
 Proof of concept for the Keycloak tool.
