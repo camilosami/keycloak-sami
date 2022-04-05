@@ -4,7 +4,7 @@
 Proof of concept for the Keycloak tool.
 
 ### 2. Install
-npm install
+```npm install```
 
 ### 3. Run
-docker compose up --build
+```docker compose up --build```
