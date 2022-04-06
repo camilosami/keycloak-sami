@@ -9,7 +9,7 @@ function validate(token, publicKey, clientId) {
 
 		// check clientID
 		if (decode.azp !== clientId) {
-			console.error(`\nClient: ${clientId} has no acceess to the client: ${decode.azp}\n`);
+			console.error(`\nRequest client: ${clientId} has no acceess to the realm client: ${decode.azp}\n`);
 			return 401;
 		}
 
@@ -20,7 +20,7 @@ function validate(token, publicKey, clientId) {
 		console.error(`\nToken not authenticated: ${err.message}\n`);
 
 		// fail
-		return 403;
+		return 401;
 	}	
 }
 

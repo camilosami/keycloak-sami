@@ -6,7 +6,7 @@ const fs = require('fs');
 const path = require('path');
 
 // Hiring realm public key
-const healmPublicKey = fs.readFileSync(path.resolve(__dirname, '../../keys/hiring-pubkey.pem'));
+const healmPublicKey = fs.readFileSync(path.resolve(__dirname, '../../keys/development/hiring-pubkey.pem'));
 
 const fastify = require('fastify')({
 	logger: true
