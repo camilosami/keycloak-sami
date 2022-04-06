@@ -1,20 +1,20 @@
-// dependdencies
 const jwt = require('jsonwebtoken');
-const fs = require('fs');
-const path = require('path');
 
-// keycloak realm public key
-const keycloakPk = fs.readFileSync(path.resolve(__dirname, '../keycloak-pk.pem'));
-
-function validate(token) {
+function validate(token, publicKey) {
 	try {
-		// validate!
-		jwt.verify(token, keycloakPk);
+		// validate
+		jwt.verify(token, publicKey);
+
+		// success!
+		return true;
 	} catch (err) {
-		throw {
+		console.log({
 			code: err.name,
 			message: err.message
-		}
+		});
+
+		// fail
+		return false;
 	}	
 }
 

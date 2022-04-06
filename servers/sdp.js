@@ -3,7 +3,7 @@ const fs = require('fs');
 const path = require('path');
 
 // Hiring realm public key
-const healmPublicKey = fs.readFileSync(path.resolve(__dirname, '../keys/pme-pubkey.pem'));
+const healmPublicKey = fs.readFileSync(path.resolve(__dirname, '../keys/sdp-pubkey.pem'));
 
 const fastify = require('fastify')({
 	logger: true
@@ -23,10 +23,10 @@ fastify.get('/', async (request, reply) => {
 	
 	// response
 	return { 
-		hello: 'Pme' 
+		hello: 'Sami Data Platform' 
 	};
 })
   
-fastify.listen(3001, (err, address) => {
+fastify.listen(3002, (err, address) => {
 	if (err) throw err
   })

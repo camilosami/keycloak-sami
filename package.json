@@ -4,7 +4,10 @@
   "description": "### 1. Description Proof of concept for the Keycloak tool.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "hiring": "node servers/hiring.js",
+    "pme": "node servers/pme.js",
+    "sdp": "node servers/sdp.js"
   },
   "repository": {
     "type": "git",
@@ -18,6 +21,7 @@
   },
   "homepage": "https://github.com/camilosami/keycloak-sami#readme",
   "dependencies": {
+    "fastify": "^3.28.0",
     "jsonwebtoken": "^8.5.1"
   }
 }
