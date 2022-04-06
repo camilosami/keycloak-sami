@@ -1,9 +1,12 @@
 const jwt = require('jsonwebtoken');
+const util = require('util');
 
+// azp. Authorized party - the party to which the ID Token was issued.
 function validate(token, publicKey) {
 	try {
 		// validate
-		jwt.verify(token, publicKey);
+		const decode = jwt.verify(token, publicKey);
+		console.log('decode', util.inspect(decode, false, Infinity, true));
 
 		// success!
 		return true;
