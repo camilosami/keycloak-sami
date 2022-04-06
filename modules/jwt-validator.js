@@ -8,7 +8,7 @@ function validate(token, publicKey) {
 		// success!
 		return true;
 	} catch (err) {
-		console.log({
+		console.error({
 			code: err.name,
 			message: err.message
 		});
