@@ -5,9 +5,15 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "hiring": "node servers/hiring.js",
-    "pme": "node servers/pme.js",
-    "sdp": "node servers/sdp.js"
+    "hiring_dev": "node servers/development/hiring.js",
+    "pme_dev": "node servers/development/pme.js",
+    "sdp_dev": "node servers/development/sdp.js",
+    "hiring_stg": "node servers/staging/hiring.js",
+    "pme_stg": "node servers/staging/pme.js",
+    "sdp_stg": "node servers/staging/sdp.js",
+    "hiring_prd": "node servers/production/hiring.js",
+    "pme_prd": "node servers/production/pme.js",
+    "sdp_prd": "node servers/production/sdp.js"
   },
   "repository": {
     "type": "git",
@@ -21,6 +27,7 @@
   },
   "homepage": "https://github.com/camilosami/keycloak-sami#readme",
   "dependencies": {
+    "dotenv": "^16.0.0",
     "fastify": "^3.28.0",
     "jsonwebtoken": "^8.5.1"
   }
